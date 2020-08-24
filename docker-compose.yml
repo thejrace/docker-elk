@@ -59,8 +59,9 @@ services:
     volumes:
       - type: bind
         source: ./filebeat/config/filebeat.yml
-        target: /usr/share/filebeat/config/logstash.yml
+        target: /usr/share/filebeat/filebeat.yml
         read_only: true
+      - /home/ipera/Sites/wifi/storage/logs:/etc/wifi-logs
     ports:
       - "5044:5044"
     environment:

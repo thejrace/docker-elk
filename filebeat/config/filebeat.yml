@@ -21,7 +21,7 @@ filebeat.inputs:
   - type: log
 
     # Change to true to enable this input configuration.
-    enabled: true
+    enabled: false
 
     # Paths that should be crawled and fetched. Glob based paths.
     paths:
@@ -64,6 +64,15 @@ filebeat.inputs:
     # Note: After is the equivalent to previous and before is the equivalent to to next in Logstash
     #multiline.match: after
 
+  - type: log
+    enabled: true
+    paths:
+        - "/etc/wifi-logs/app-2020-08-24.log"
+    tags: ["wifi-logs"]
+    multiline.type: pattern
+    multiline.pattern: '\[[\d]{4}'
+    multiline.negate: true
+    multiline.match: after
 
 #============================= Filebeat modules ===============================
 
