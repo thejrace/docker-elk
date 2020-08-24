@@ -67,7 +67,7 @@ filebeat.inputs:
   - type: log
     enabled: true
     paths:
-        - "/etc/wifi-logs/app-2020-08-24.log"
+        - "/etc/wifi-logs/app/app-2020-08-24.log"
     tags: ["wifi-logs"]
     multiline.type: pattern
     multiline.pattern: '\[[\d]{4}'

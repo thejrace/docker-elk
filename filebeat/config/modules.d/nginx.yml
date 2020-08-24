@@ -5,7 +5,7 @@
 
     # Set custom paths for the log files. If left empty,
     # Filebeat will choose the paths depending on your OS.
-    var.paths: ["/home/ipera/.valet/Log/nginx-access.log"]
+    var.paths: ["/etc/wifi-logs/nginx/*.log"]
 
   # Error logs
   error:
@@ -13,7 +13,7 @@
 
     # Set custom paths for the log files. If left empty,
     # Filebeat will choose the paths depending on your OS.
-    var.paths: ["/home/ipera/.valet/Log/nginx-error.log"]
+    var.paths: ["/etc/wifi-logs/nginx/*.log"]
 
   # Ingress-nginx controller logs. This is disabled by default. It could be used in Kubernetes environments to >
   ingress_controller:
