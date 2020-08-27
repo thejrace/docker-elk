@@ -5,8 +5,8 @@
 #- pipeline.id: main
 #  path.config: "/usr/share/logstash/pipeline"
 
-- pipeline.id: wifi
-  path.config: "/usr/share/logstash/pipeline/wifi-pipeline.conf"
+#- pipeline.id: wifi
+#  path.config: "/usr/share/logstash/pipeline/wifi-pipeline.conf"
 
 - pipeline.id: filebeat
   path.config: "/usr/share/logstash/pipeline/filebeat-pipeline.conf"

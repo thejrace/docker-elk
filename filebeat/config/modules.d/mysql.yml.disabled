@@ -1,0 +1,4 @@
+- module: mysql
+  error:
+    enabled: true
+    var.paths: ["/etc/wifi-logs/mysql/mysql_error.log"]
