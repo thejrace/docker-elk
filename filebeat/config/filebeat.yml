@@ -83,7 +83,7 @@ filebeat.inputs:
   - type: log
     enabled: true
     paths:
-      - "/etc/wifi-logs/nginx/*.log"
+      - "/etc/wifi-logs/nginx/*-error.log"
     tags: ["nginx-logs"]
 
   - type: log
