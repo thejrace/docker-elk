@@ -59,8 +59,12 @@ services:
     volumes:
       - type: bind
         source: ./filebeat/config/filebeat.yml
-        target: /usr/share/filebeat/config/logstash.yml
+        target: /usr/share/filebeat/filebeat.yml
         read_only: true
+      - $STARLING_LOGS_VOLUME
+      - $NGINX_LOGS_VOLUME
+      - $MYSQL_LOGS_VOLUME
+      - $FREERADIUS_LOGS_VOLUME
     ports:
       - "5044:5044"
     environment:
