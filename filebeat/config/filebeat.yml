@@ -92,6 +92,16 @@ filebeat.inputs:
       - "/etc/wifi-logs/radius/*.log"
     tags: ["radius-logs"]
 
+  - type: log
+    enabled: false
+    paths:
+      - "/etc/wifi-logs/radactt/*.log"
+    tags: ["radactt-logs"]
+    multiline.type: pattern
+    multiline.pattern: '^[A-Z\t]'
+    multiline.negate: true
+    multiline.match: after
+
 #============================= Filebeat modules ===============================
 
 filebeat.config.modules:
