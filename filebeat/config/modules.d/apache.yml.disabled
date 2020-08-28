@@ -1,7 +1,0 @@
-- module: apache
-  access:
-    enabled: false
-    var.paths: ["C:\xampp3\apache\logs\access.log"]
-  error:
-    enabled: true
-    var.paths: ["C:\xampp3\apache\logs\error.log"]

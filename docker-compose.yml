@@ -63,7 +63,7 @@ services:
         read_only: true
       - C:\xampp2\htdocs\wifi\storage\logs:/etc/wifi-logs/app
       - C:\xampp3\mysql\log:/etc/wifi-logs/mysql
-    #      - /home/ipera/.valet/Log:/etc/wifi-logs/nginx
+      - C:\xampp3\nginx\log:/etc/wifi-logs/nginx
     ports:
       - "5044:5044"
     environment:

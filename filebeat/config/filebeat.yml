@@ -68,7 +68,7 @@ filebeat.inputs:
     enabled: true
     paths:
         - "/etc/wifi-logs/app/*.log"
-    tags: ["wifi-logs"]
+    tags: ["starling-logs"]
     multiline.type: pattern
     multiline.pattern: '\[[\d]{4}'
     multiline.negate: true
@@ -79,6 +79,18 @@ filebeat.inputs:
     paths:
       - "/etc/wifi-logs/mysql/*.log"
     tags: ["mysql-logs"]
+
+  - type: log
+    enabled: true
+    paths:
+      - "/etc/wifi-logs/nginx/*.log"
+    tags: ["nginx-logs"]
+
+  - type: log
+    enabled: true
+    paths:
+      - "/etc/wifi-logs/radius/*.log"
+    tags: ["radius-logs"]
 
 #============================= Filebeat modules ===============================
 
