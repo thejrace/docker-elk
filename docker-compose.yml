@@ -65,6 +65,7 @@ services:
       - $NGINX_LOGS_VOLUME
       - $MYSQL_LOGS_VOLUME
       - $FREERADIUS_LOGS_VOLUME
+#      - $RADACTT_LOGS_VOLUME
     ports:
       - "5044:5044"
     environment:
